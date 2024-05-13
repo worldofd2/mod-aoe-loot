@@ -26,6 +26,13 @@
 AOELoot.Enable = 1
 
 #
+#     AOELoot.Announce
+#        Announce the module on login if it is enabled
+#        Default:     1 (1 = ON, 0 = OFF)
+
+AOELoot.Announce = 1
+
+#
 #   AOELoot.MailEnable
 #       Description: Enables the sending of mail if there are no spaces in the bags.
 #       Default:    1 (Enabled)

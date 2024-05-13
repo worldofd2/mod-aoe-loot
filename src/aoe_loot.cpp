@@ -114,7 +114,10 @@ void OnCreatureLootAOE(Player* player, ObjectGuid lootguid)
 
 void AoeLootPlayer::OnLogin(Player* player)
 {
-    if (sConfigMgr->GetOption<bool>("AOELoot.Enable", true))
+    bool enable = sConfigMgr->GetOption<bool>("AOELoot.Enable", true);
+    bool announce = sConfigMgr->GetOption<bool>("AOELoot.Announce", true);
+
+    if (!enable && !announce)
     {
         ChatHandler(player->GetSession()).PSendSysMessage(AOE_ACORE_STRING_MESSAGE);
     }
